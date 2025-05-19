@@ -100,6 +100,7 @@
 (5) πage (Salesperson ⋈ salesperson.name=order.salesperson ( σcustname="홍길동" (order)))
 (6) π_city (((σ_age=25 (Salesperson)) ⨝_{S.name=O.salesperson} Order) ⨝_{O.custname=C.name} Customer)
 (7) π_name, custname (Salesperson ⨝_{S.name=O.salesperson} Order)
+
 19.
 (1)
 Employee : empno
@@ -117,7 +118,17 @@ Work : (empno, projno)
 πname, address(Employee ⋈ Department)
 **πname, address(**σdeptname="IT부서" (Employee ⋈ Department))
 **πname(**σprojname="미래" (Project ⋈ Works ⋈ Employee))
+
 20.
+(1) σ_dest='제주'(Flight)
+(2) σ_src='김포' ∧ dest='제주'(Flight)
+(3) π_fid(σ_pid=100 ∧ fdate > '2024-01-01'(Booking))
+(4) π_pname(Passenger ⨝ Booking)
+(5) π_pname(Passenger) − π_pname(Passenger ⨝ Booking)
+(6) π_aname(σ_pcity=acity(Passenger ⨝ Agency))  
+(7) σ_fdate ≥ '2024-01-01' ∧ fdate ≤ '2024-01-30' ∧ time > '16:00'(Flight)
+(8) π_aname(Agency) − π_aname((σ_pid=100(Booking)) ⨝ Agency)
+(9) π_*(σ_aname='마당여행사'(Agency) ⨝ Booking ⨝ σ_pgender='남'(Passenger))
 
 
 
