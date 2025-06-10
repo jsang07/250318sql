@@ -1,0 +1,33 @@
+1.
+ABS(-15) : 15
+CEIL(15.7) : 16
+COS(3.14159) : -1
+FLOOR(15.7) : 15
+LOG(10,100) : 2
+MOD(11,4) : 3
+POWER(3,2) : 9
+ROUND(15.7) : 16
+SIGN(-15) : -1
+TRUNCATE(15.7, 0) : 15
+CHAR(67 USING utf8) : C
+CONCAT('HAPPY','Birthday') : HAPPYBirthday
+LOWER('Birthday') : birthday
+LPAD('Page 1',15,'*.') : *.*.*.*.*Page 1
+REPLACE('JACK','J','BL') : BLACK
+RPAD('Page 1',15,'*') : Page 1*********
+SUBSTR('ABCDEFG',3,4) : CDEF
+TRIM(LEADING 0 FROM '00AA00') : AA00
+UPPER('Birthday') : BIRTHDAY
+ASCII('A') : 65
+LENGTH('Birthday') : 8
+ADDDATE('2024-02-14', INTERVAL 10 DAY ) : 2024-02-24
+LAST_DAY(SYSDATE()) : 2024-10-31
+NOW(): 2024-10-21 18:14:07
+DATE_FORMAT(SYSDATE(), '%Y'): 2024
+CONCAT(123): 123
+CAST('12.3' AS DECIMAL(3,1)): 12.3
+IF(1=1, 'aa', 'bb'): aa
+IFNULL(123, 345): 123
+IFNULL(NULL, 123): 123
+
+2.
